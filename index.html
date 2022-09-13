@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+
+    <body>
+        <h1>Cadastrar Local</h1>
+        <label for="">Endereço</label>
+        <input type="text" placeholder="Endereço" id="location-input">
+        <label for="CEP">CEP</label>
+        <input type="text" placeholder="00000-000">
+        <label for="Estado">Estado</label>
+        <input type="text" placeholder="Estado">
+        <label for="Cidade">Cidade</label>
+        <input type="text" placeholder="Cidade">
+        <div id="map"></div>
+        <script async
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAQ9igd5Oft5QmCBHg2-4HI4zlOqTYOcZM&callback=initMap">
+</script>
+        <script src="js/script.js"></script>
+
+</html>
