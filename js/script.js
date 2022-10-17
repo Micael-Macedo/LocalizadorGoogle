@@ -1,6 +1,13 @@
 "use strict";
+var latitudeCadastrada = document.getElementById('Lat');
+var longitudeCadastrada = document.getElementById('Long');
 const successCallback = (position) => {
   console.log(position);
+  console.log(position.coords.latitude);
+  latitudeAtual = position.coords.latitude;
+  console.log(position.coords.longitude);
+  longitudeAtual = position.coords.longitude;
+
 }
 
 const errorCallback = (error) => {
@@ -78,9 +85,13 @@ function initMap() {
   }
 
   function renderAddress(place) {
+    var local;
     map.setCenter(place.geometry.location);
     marker.setPosition(place.geometry.location);
     marker.setVisible(true);
-    // console.log("Local: Latitude" + place.latitude + "Longitude"+ place.longitude);
+    console.log("Local: Latitude" + place.geometry.location);
+    local = place.geometry.location;
+    latitudeCadastrada.innerHTML = local.lat();
+    longitudeCadastrada.innerHTML = local.lng();
   }
 }
